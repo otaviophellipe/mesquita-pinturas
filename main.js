@@ -1,4 +1,4 @@
-// Smooth scroll for navigation links
+// scroll suave para navegação
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -9,14 +9,14 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// Contact form submission
+// Formulário de Contato
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     alert('Obrigado pela mensagem! Entraremos em contato em breve.');
     this.reset();
 });
 
-// Intersection Observer for fade-in animations
+// Animações
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
