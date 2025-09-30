@@ -1,4 +1,4 @@
-/* CSS Variables */
+/* CSS */
 :root {
     --primary-color: #2b184f;
     --secondary-color: #ff6600;
@@ -88,7 +88,7 @@ nav ul li a {
     background-color: #e55a00;
 }
 
-/* Sections */
+/* Seções */
 section {
     padding: 60px 0;
 }
@@ -189,7 +189,7 @@ footer {
     padding: 20px 0;
 }
 
-/* Animations */
+/* Animações */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -201,7 +201,7 @@ footer {
     transform: translateY(0);
 }
 
-/* Responsive */
+/* Responsivo */
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
