@@ -136,13 +136,14 @@ section h2 {
 /* Galeria */
 .galeria-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
 .galeria-grid img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s;
@@ -150,6 +151,26 @@ section h2 {
 
 .galeria-grid img:hover {
     transform: scale(1.05);
+}
+
+/* Vídeo */
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.video-container video {
+    width: 40%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.video-container button {
+    margin-top: 10px;
 }
 
 /* Contato */
@@ -181,6 +202,91 @@ section h2 {
     width: 100%;
 }
 
+/* Banner Carousel */
+#banner {
+    position: relative;
+    overflow: hidden;
+    height: 60vh;
+    background-color: var(--light-bg); /* Fundo sólido para uniformizar */
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ocupa todo o espaço disponível, cortando se necessário para preencher */
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    transform: scale(0.95);
+    border-radius: 15px; /* Bordas mais arredondadas */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra para suavizar */
+    filter: brightness(1.1) contrast(0.9); /* Suaviza as cores */
+}
+
+.carousel img.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Botões de navegação */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Indicadores (dots) */
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: white;
+}
+
 /* Footer */
 footer {
     background: linear-gradient(135deg, var(--primary-color), #2b184f);
@@ -202,6 +308,22 @@ footer {
 }
 
 /* Responsivo */
+@media (max-width: 1024px) {
+    #banner {
+        height: 50vh;
+    }
+
+    .carousel-btn {
+        padding: 12px;
+        font-size: 20px;
+    }
+
+    .dot {
+        width: 14px;
+        height: 14px;
+    }
+}
+
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
@@ -214,5 +336,69 @@ footer {
 
     #hero h2 {
         font-size: 2rem;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #banner {
+        height: 40vh; /* Altura maior em dispositivos móveis para melhor visibilidade */
+    }
+
+    .carousel-btn {
+        padding: 8px;
+        font-size: 16px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    #banner {
+        height: 35vh;
+    }
+
+    .carousel-btn {
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+    }
+
+    .carousel-dots {
+        bottom: 10px;
+        gap: 8px;
+    }
+
+    #hero {
+        padding: 60px 0;
+    }
+
+    #hero h2 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-container video {
+        width: 100%;
+        max-width: none;
     }
 }
