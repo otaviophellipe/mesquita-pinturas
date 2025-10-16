@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/mesquita-pinturas-site/static/css/main.f855e6bc.css",
-    "main.js": "/mesquita-pinturas-site/static/js/main.ed9983ac.js",
+    "main.css": "/mesquita-pinturas-site/static/css/main.a7e37904.css",
+    "main.js": "/mesquita-pinturas-site/static/js/main.38618676.js",
     "static/js/453.0a248f51.chunk.js": "/mesquita-pinturas-site/static/js/453.0a248f51.chunk.js",
-    "static/media/logo.svg": "/mesquita-pinturas-site/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/mesquita-pinturas-site/index.html",
-    "main.f855e6bc.css.map": "/mesquita-pinturas-site/static/css/main.f855e6bc.css.map",
-    "main.ed9983ac.js.map": "/mesquita-pinturas-site/static/js/main.ed9983ac.js.map",
+    "main.a7e37904.css.map": "/mesquita-pinturas-site/static/css/main.a7e37904.css.map",
+    "main.38618676.js.map": "/mesquita-pinturas-site/static/js/main.38618676.js.map",
     "453.0a248f51.chunk.js.map": "/mesquita-pinturas-site/static/js/453.0a248f51.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.ed9983ac.js"
+    "static/css/main.a7e37904.css",
+    "static/js/main.38618676.js"
   ]
 }
