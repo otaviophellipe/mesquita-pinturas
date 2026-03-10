@@ -33,7 +33,7 @@ Este é um site de portfólio para Mesquita Pinturas e Reparos, convertido para 
 
 ## Como ver o site em execução
 
-1 - [Entre no link: https://otaviophellipe.github.io/mesquita-pinturas](https://otaviophellipe.github.io/mesquita-pinturas)
+1 - [Entre no link: https://otaviophellipe.github.io/Mesquita-Pinturas](https://otaviophellipe.github.io/Mesquita-Pinturas)
 
 ## ⚙️ Desenvolvimento
 - Edite `style.sass` para estilos (compila para `style.css`).
